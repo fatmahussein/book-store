@@ -1,0 +1,12 @@
+
+.card{
+    width: 29rem;
+    height: min-content;
+    background-color: white;
+}
+.cardlist{
+    display: flex;
+    margin-left: auto;flex-direction: column;
+    margin-right: auto;
+    margin-top: 3rem;
+}
