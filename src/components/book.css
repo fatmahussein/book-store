@@ -116,3 +116,7 @@ form button {
   align-items: center;
   margin-top: 0;
 }
+
+#btn {
+  background-color: white;
+}

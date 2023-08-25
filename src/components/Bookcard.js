@@ -1,4 +1,4 @@
-import './book.css';
+import BookList from './BookList';
 
 function Bookcard() {
   const books = [
@@ -27,58 +27,7 @@ function Bookcard() {
       id: 3,
     },
   ];
-  return (
-
-    <ul className="card">
-
-      {books.map((book) => (
-
-        <>
-          <li key={book.id} className="cardlist">
-            <div className="columns">
-
-              <div className="col1">
-                <p>{book.category}</p>
-                <h1>{book.name}</h1>
-                <p id="author" className="i">{book.author}</p>
-                <div className="comment">
-                  <p className="i">comments</p>
-                  <div className="border" />
-                  <p className="i">Remove</p>
-                  <div className="border" />
-                  <p className="i">Edit</p>
-                </div>
-              </div>
-
-              <div className="col2">
-                <div className="progress" />
-                <div className="percentage">
-                  <p className="Percent">
-                    {book.percentageComplete}
-                    %
-                  </p>
-
-                  <p>Completed</p>
-                </div>
-              </div>
-
-              <div className="border" />
-
-              <div className="col3">
-                <p>CURRENT CHAPTER</p>
-                <p>{book.currentChapter}</p>
-                <button type="button">UPDATE PROGRESS</button>
-              </div>
-
-            </div>
-          </li>
-        </>
-
-      ))}
-
-    </ul>
-
-  );
+  return <BookList books={books} />;
 }
 
 export default Bookcard;
