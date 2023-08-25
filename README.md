@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h1>Math-magicians</h1>
+  <h1>Book Store</h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -28,9 +28,7 @@
 
 # 📖 About the Project <a name="about-project"></a>
 
-**math-magicians** is a web application designed for mathematics enthusiasts. It is a Single Page App (SPA) that provides users with the ability to perform simple calculations and discover random math-related quotes.
-
-The purpose of the project is to create an intuitive and user-friendly calculator application that allows users to perform basic calculations on any device with an internet connection. Additionally, the application provides inspirational and thought-provoking math-related quotes to inspire users.
+**Book Store** is a project that allows users to add a book and delete it. Also, they can add, edit, and delete comments on specific books.
 
 ## 🛠️ Built With <a name="built-with"></a>
 
@@ -150,7 +148,7 @@ npm start
 
 Contributions to Book store are welcome! If you would like to contribute, please follow these guidelines:
 
-Feel free to check the [issues page](https://github.com/fatmahussein/Math-Magicians/issues/2).
+Feel free to check the [issues page](https://github.com/fatmahussein/book-store/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
