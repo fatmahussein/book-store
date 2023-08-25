@@ -1,25 +1,28 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   background-color: rgb(206, 198, 198);
 }
-.navigationbar{
+
+.navigationbar {
   background-color: white;
   display: flex;
   gap: 5rem;
   padding: 1rem 4rem;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-
 }
-nav{
+
+nav {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.bookstorecms{
+
+.bookstorecms {
   color: #0290ff;
   font-weight: 800;
   font-size: 20px;
@@ -27,15 +30,22 @@ nav{
   display: flex;
   align-items: center;
 }
-.circleborder{
+
+.circleborder {
   margin-left: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  border: 1px solid rgb(215, 210, 210);
+  border: 1px solid #ece5e5;
   border-radius: 1rem;
 }
-.user-logo{
-width: 1rem;
-height: 1rem;
+
+.user-logo {
+  width: 1rem;
+  height: 1rem;
+}
+
+.borderline {
+  border: 1px solid rgb(163, 160, 160);
+  margin: 3rem 1.5rem;
 }

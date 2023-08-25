@@ -1,12 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-.card{
-    width: 29rem;
-    height: min-content;
-    background-color: white;
+.card {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-family: RobotoSlab, serif;
 }
-.cardlist{
-    display: flex;
-    margin-left: auto;flex-direction: column;
-    margin-right: auto;
-    margin-top: 3rem;
+
+.cardlist {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col1 {
+  width: 20rem;
+}
+
+.col2 {
+  width: 20rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.col3 {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h1 {
+  font-size: 19px;
+}
+
+.i {
+  color: #0290ff;
+}
+
+.comment {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.border {
+  border: 1px solid rgb(199, 197, 197);
+}
+
+.progress {
+  width: 5rem;
+  height: 4rem;
+  border: 1px solid #0290ff;
+  border-radius: 50%;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.Percent {
+  font-size: 2.2rem;
+}
+
+button {
+  background-color: #0290ff;
+  outline: none;
+  border: none;
+  width: 10rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5rem 10rem;
+}
+
+label {
+  font-size: 2rem;
+  color: rgb(101, 100, 100);
+}
+
+.formelements {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+input {
+  width: 25rem;
+  height: 2rem;
+  padding: 5px;
+  outline: none;
+}
+
+form button {
+  padding: 0.5rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
 }

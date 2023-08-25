@@ -1,12 +1,15 @@
 import Bookcard from './Bookcard';
+import BookForm from './addBookForm';
 
 function Books() {
   return (
+
     <>
-
-      <Bookcard />
-      ;
-
+      <div>
+        <Bookcard />
+        <div className="borderline" />
+        <BookForm />
+      </div>
     </>
 
   );
