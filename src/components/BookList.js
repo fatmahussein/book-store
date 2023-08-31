@@ -6,8 +6,8 @@ import { removeBook } from '../redux/books/booksSlice';
 
 function BookList({ books }) {
   const dispatch = useDispatch();
-  const handleDelete = () => {
-    dispatch(removeBook(item_id));
+  const handleDelete = (itemId) => {
+    dispatch(removeBook(itemId));
   };
   return (
     <div>
@@ -24,7 +24,7 @@ function BookList({ books }) {
                 <div className="comment">
                   <button type="submit" className="i" id="btn">comments</button>
                   <div className="border" />
-                  <button type="submit" className="i" id="btn" onClick={handleDelete}>Remove</button>
+                  <button type="submit" className="i" id="btn" onClick={() => handleDelete(book.item_id)}>Remove</button>
                   <div className="border" />
                   <button type="submit" className="i" id="btn">Edit</button>
                 </div>
