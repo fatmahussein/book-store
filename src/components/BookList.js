@@ -1,57 +1,65 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './book.css';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 
-const BookList = ({ books }) => (
-  <div>
-    <ul className="card">
-      {books.map((book) => (
-        <li key={book.id} className="cardlist">
-          <div className="columns">
-            <div className="col1">
-              <p>{book.category}</p>
-              <h1>{book.name}</h1>
-              <p id="author" className="i">
-                {book.author}
-              </p>
-              <div className="comment">
-                <button type="submit" className="i" id="btn">comments</button>
-                <div className="border" />
-                <button type="submit" className="i" id="btn">Remove</button>
-                <div className="border" />
-                <button type="submit" className="i" id="btn">Edit</button>
-              </div>
-            </div>
-
-            <div className="col2">
-              <div className="progress" />
-              <div className="percentage">
-                <p className="Percent">
-                  {book.percentageComplete}
-                  %
+function BookList({ books }) {
+  const dispatch = useDispatch();
+  const handleDelete = () => {
+    dispatch(removeBook(item_id));
+  };
+  return (
+    <div>
+      <ul className="card">
+        {books.map((book) => (
+          <li key={book.item_id} className="cardlist">
+            <div className="columns">
+              <div className="col1">
+                <p>{book.category}</p>
+                <h1>{book.title}</h1>
+                <p id="author" className="i">
+                  {book.author}
                 </p>
-                <p>Completed</p>
+                <div className="comment">
+                  <button type="submit" className="i" id="btn">comments</button>
+                  <div className="border" />
+                  <button type="submit" className="i" id="btn" onClick={handleDelete}>Remove</button>
+                  <div className="border" />
+                  <button type="submit" className="i" id="btn">Edit</button>
+                </div>
+              </div>
+
+              <div className="col2">
+                <div className="progress" />
+                <div className="percentage">
+                  <p className="Percent">
+                    {book.percentageComplete}
+                    %
+                  </p>
+                  <p>Completed</p>
+                </div>
+              </div>
+
+              <div className="border" />
+
+              <div className="col3">
+                <p>CURRENT CHAPTER</p>
+                <p>{book.currentChapter}</p>
+                <button type="button">UPDATE PROGRESS</button>
               </div>
             </div>
-
-            <div className="border" />
-
-            <div className="col3">
-              <p>CURRENT CHAPTER</p>
-              <p>{book.currentChapter}</p>
-              <button type="button">UPDATE PROGRESS</button>
-            </div>
-          </div>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      item_id: PropTypes.number.isRequired,
       category: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
@@ -60,5 +68,4 @@ BookList.propTypes = {
     }),
   ).isRequired,
 };
-
 export default BookList;

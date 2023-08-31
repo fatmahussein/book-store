@@ -14,5 +14,5 @@ const categoriesSlice = createSlice({
   },
 });
 
-module.exports = categoriesSlice.reducer;
-module.exports.categoriesActions = categoriesSlice.actions;
+export default categoriesSlice.reducer;
+export const { updateStatus } = categoriesSlice.actions;
