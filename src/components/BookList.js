@@ -59,12 +59,10 @@ function BookList({ books }) {
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      item_id: PropTypes.number.isRequired,
+      item_id: PropTypes.string.isRequired,
       category: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
-      percentageComplete: PropTypes.number.isRequired,
-      currentChapter: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };
