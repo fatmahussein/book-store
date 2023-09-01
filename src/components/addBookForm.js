@@ -15,6 +15,7 @@ function BookForm() {
     const inputs = { [name]: value };
     setInput({ ...input, ...inputs });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = uuidv4();
