@@ -67,12 +67,13 @@ h1 {
   border-radius: 50%;
   border: 1px solid rgb(172, 168, 168);
   padding: 7px;
+ 
 }
 .inner-circle{
   height: 65px;
   width: 65px;
   border-radius: 50%;
-  border: 1px solid rgb(179, 175, 175)
+  border:1px solid rgb(179, 175, 175)
 }
 .percentage {
   display: flex;
