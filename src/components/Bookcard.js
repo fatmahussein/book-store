@@ -6,7 +6,7 @@ import { getBooksData } from '../redux/books/booksSlice';
 function Bookcard() {
   const {
     books, isLoading, isError, isSuccessful,
-  } = useSelector((store) => store.book);
+  } = useSelector((store) => store.books);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooksData());

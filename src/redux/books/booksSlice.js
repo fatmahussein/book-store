@@ -51,7 +51,7 @@ export const addBooks = createAsyncThunk('book/addBooks', async ({ id, title, au
 
 export const deleteBook = createAsyncThunk('book/deleteBook', async (id) => {
   try {
-    const dataStream = await axios.delete(url + id);
+    const dataStream = await axios.delete(`${url}/${id}`);
     return dataStream;
   } catch (error) {
     return error;
