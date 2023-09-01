@@ -1,36 +1,54 @@
 import './book.css';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { v4 as uuidv4 } from 'uuid';
+import { addBooks } from '../redux/books/booksSlice';
 
 function BookForm() {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [input, setInput] = useState({
+    title: '',
+    author: '',
+  });
   const dispatch = useDispatch();
-
+  const getInputs = (e) => {
+    const { name, value } = e.target;
+    const inputs = { [name]: value };
+    setInput({ ...input, ...inputs });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title && author) {
-      dispatch(addBook({
-        title,
-        author,
-        category: 'Fiction',
-        item_id: Date.now().toString(),
-      }));
-      setTitle('');
-      setAuthor('');
-    }
+    const id = uuidv4();
+    const book = { id, ...input };
+    dispatch(addBooks(book));
+    setInput(input);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <label htmlFor="label">
         ADD NEW BOOK
         <div className="formelements">
-          <input id="bookTitle" placeholder="Book title" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <input id="category" placeholder="Author" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
-          <button type="submit">ADD BOOK</button>
+          <input
+            id="bookTitle"
+            type="text"
+            onChange={getInputs}
+            name="title"
+            value={input.title}
+            placeholder="Book Title"
+          />
+          <br />
+          <input
+            type="text"
+            name="author"
+            id="author"
+            onChange={getInputs}
+            value={input.author}
+            placeholder="Author"
+          />
+          <br />
+          <button type="submit" onClick={handleSubmit}>
+            ADD BOOK
+          </button>
         </div>
-
       </label>
     </form>
   );
