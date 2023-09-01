@@ -12,12 +12,12 @@ function Bookcard() {
     dispatch(getBooksData());
   }, [dispatch, isSuccessful]);
   if (isLoading) {
-    return <p>Loading....Please wait</p>;
+    return <p className="info">Loading....Please wait</p>;
   }
   if (isError) {
-    return <p>Sorry, please try again</p>;
+    return <p className="info">Sorry, please try again</p>;
   }
-  if (books.length === 0) return <p>Sorry, no books available at the moment</p>;
+  if (books.length === 0) return <p className="info">Sorry, no books available at the moment</p>;
 
   return <BookList books={books} />;
 }
