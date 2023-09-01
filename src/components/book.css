@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
 
 .card {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  font-family: RobotoSlab, serif;
+  font-family: "Montserrat", serif;
 }
 
 .cardlist {
@@ -27,6 +27,7 @@
   width: 20rem;
   display: flex;
   gap: 1rem;
+  align-items: center;
   justify-content: flex-end;
 }
 
@@ -34,7 +35,8 @@
   width: 20rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -47,34 +49,55 @@ h1 {
 
 .comment {
   display: flex;
-  margin-top: 2rem;
   gap: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.category {
+  color: #9c9c9c;
+}
+
+#author {
+  font-family: "Roboto Slab", serif;
+}
+
+.chapter {
+  font-family: "Roboto Slab", serif;
+  color: #9c9c9c;
+}
+
+.completed {
+  color: #9c9c9c;
 }
 
 .border {
-  border: 1px solid rgb(199, 197, 197);
+  border: 1px solid #9c9c9c;
+  height: 1.5rem;
+  margin-top: 1.28rem;
+  color: #9c9c9c;
 }
 
 .progress {
   width: 5rem;
   height: 5rem;
   position: relative;
- 
 }
-.outer-circle{
+
+.outer-circle {
   height: 80px;
   width: 80px;
   border-radius: 50%;
   border: 1px solid rgb(172, 168, 168);
   padding: 7px;
- 
 }
-.inner-circle{
+
+.inner-circle {
   height: 65px;
   width: 65px;
   border-radius: 50%;
-  border:1px solid rgb(179, 175, 175)
+  border: 1px solid rgb(179, 175, 175);
 }
+
 .percentage {
   display: flex;
   flex-direction: column;
@@ -91,9 +114,17 @@ button {
   border: none;
   width: 10rem;
   padding: 0.5rem;
+  font-family: "Roboto Slab", serif;
   margin-top: 1rem;
   border-radius: 5px;
   color: white;
+}
+
+.border2 {
+  border: 1px solid #9c9c9c;
+  height: 5.5rem;
+  margin-top: 1.28rem;
+  color: #9c9c9c;
 }
 
 form {

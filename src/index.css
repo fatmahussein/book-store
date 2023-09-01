@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(206, 198, 198);
+  background-color: #f5f6fa;
 }
 
 .navigationbar {
@@ -19,16 +21,27 @@ body {
 nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #6b6b6b;
+}
+
+nav .active {
+  color: #121212;
 }
 
 .bookstorecms {
   color: #0290ff;
-  font-weight: 800;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   display: flex;
   align-items: center;
+  font-weight: 900;
+  font-family: "Montserrat", serif;
 }
 
 .circleborder {
