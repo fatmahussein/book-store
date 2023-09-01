@@ -2,18 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './book.css';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook } from '../redux/books/booksSlice';
 
 function BookList({ books }) {
   const dispatch = useDispatch();
-  const handleDelete = (itemId) => {
-    dispatch(removeBook(itemId));
-  };
+
   return (
     <div>
       <ul className="card">
         {books.map((book) => (
-          <li key={book.item_id} className="cardlist">
+          <li key={book.id} className="cardlist">
             <div className="columns">
               <div className="col1">
                 <p>{book.category}</p>
@@ -24,7 +22,7 @@ function BookList({ books }) {
                 <div className="comment">
                   <button type="submit" className="i" id="btn">comments</button>
                   <div className="border" />
-                  <button type="submit" className="i" id="btn" onClick={() => handleDelete(book.item_id)}>Remove</button>
+                  <button type="submit" className="i" id="btn" onClick={() => dispatch(deleteBook(book.id))}>Remove</button>
                   <div className="border" />
                   <button type="submit" className="i" id="btn">Edit</button>
                 </div>
