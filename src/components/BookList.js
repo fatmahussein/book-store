@@ -29,7 +29,13 @@ function BookList({ books }) {
               </div>
 
               <div className="col2">
-                <div className="progress" />
+                <div className="progress">
+                  <div className="outer-circle">
+                    <div className="inner-circle">
+                      <div id="number" />
+                    </div>
+                  </div>
+                </div>
                 <div className="percentage">
                   <p className="Percent">
                     {book.percentageComplete}

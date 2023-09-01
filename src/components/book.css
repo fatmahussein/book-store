@@ -57,11 +57,23 @@ h1 {
 
 .progress {
   width: 5rem;
-  height: 4rem;
-  border: 1px solid #0290ff;
-  border-radius: 50%;
+  height: 5rem;
+  position: relative;
+ 
 }
-
+.outer-circle{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(172, 168, 168);
+  padding: 7px;
+}
+.inner-circle{
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  border: 1px solid rgb(179, 175, 175)
+}
 .percentage {
   display: flex;
   flex-direction: column;
