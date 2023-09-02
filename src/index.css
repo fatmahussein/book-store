@@ -7,14 +7,14 @@
 }
 
 body {
-  background-color: #f5f6fa;
+  background-color: #f3f4f8;
 }
 
 .navigationbar {
   background-color: white;
   display: flex;
   gap: 5rem;
-  padding: 1rem 4rem;
+  padding: 1rem 3.5rem;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -48,9 +48,10 @@ nav .active {
   margin-left: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border-radius: 50%;
+  margin-right: 0.4rem;
   padding: 0.5rem;
   border: 1px solid #ece5e5;
-  border-radius: 1rem;
 }
 
 .user-logo {
@@ -60,7 +61,7 @@ nav .active {
 
 .borderline {
   border: 1px solid rgb(163, 160, 160);
-  margin: 3rem 1.5rem;
+  margin: 3rem 3.5rem;
 }
 
 .info {
