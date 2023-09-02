@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './book.css';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../redux/books/booksSlice';
+import ProgressBar from './progressBar';
 
 function BookList({ books }) {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ function BookList({ books }) {
           <li key={book.id} className="cardlist">
             <div className="columns">
               <div className="col1">
-                <p>{book.category}</p>
+                <p className="category">{book.category}</p>
                 <h1>{book.title}</h1>
                 <p id="author" className="i">
                   {book.author}
@@ -29,20 +30,20 @@ function BookList({ books }) {
               </div>
 
               <div className="col2">
-                <div className="progress" />
+                <ProgressBar />
                 <div className="percentage">
                   <p className="Percent">
-                    {book.percentageComplete}
+                    {Math.floor(Math.random() * (99 - 0)) + 0}
                     %
                   </p>
-                  <p>Completed</p>
+                  <p className="completed">Completed</p>
                 </div>
               </div>
 
-              <div className="border" />
+              <div className="border2" />
 
               <div className="col3">
-                <p>CURRENT CHAPTER</p>
+                <p className="chapter">CURRENT CHAPTER</p>
                 <p>{book.currentChapter}</p>
                 <button type="button">UPDATE PROGRESS</button>
               </div>
