@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
 
 .card {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
   font-family: "Montserrat", serif;
 }
 
@@ -130,7 +130,7 @@ button {
 form {
   display: flex;
   flex-direction: column;
-  margin: 0 1.5rem 10rem;
+  margin: 0 3.5rem 10rem;
 }
 
 label {
@@ -140,7 +140,7 @@ label {
 
 .formelements {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
 }
